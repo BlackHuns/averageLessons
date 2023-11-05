@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+        public class averageLessons {
+        public static void main (String[] args){
+                System.out.println("**************ORTALAMA HESAPLAMA PROGRAMI************");
+
+                int mat,fizik, turkce, kimya, muzik;
+
+                Scanner tara = new Scanner(System.in);
+
+                System.out.println("Matematik notunuzu giriniz: ");
+                mat = tara.nextInt();
+                while(mat<0 || mat>100) {
+                        System.out.println("0-100 arası bir değer giriniz: ");
+                        mat = tara.nextInt();
+                }
+                System.out.println("Fizik notunu giriniz:");
+                fizik = tara.nextInt();
+                while (fizik<0 || fizik>100){
+                        System.out.println("0-100 arasdında bir değer girniz:");
+                        fizik = tara.nextInt();
+                }
+                System.out.println("Türkçe notunu giriniz:");
+                turkce = tara.nextInt();
+                while (turkce<0 || turkce>100){
+                        System.out.println("0-100 arasdında bir değer girniz:");
+                        turkce = tara.nextInt();
+                }
+                System.out.println("kimya notunu giriniz:");
+                kimya = tara.nextInt();
+                while (kimya<0 || kimya>100){
+                        System.out.println("0-100 arasdında bir değer girniz:");
+                        kimya = tara.nextInt();
+                }
+                System.out.println("müzik notunu giriniz:");
+                muzik = tara.nextInt();
+                while (muzik<0 || muzik>100){
+                        System.out.println("0-100 arasdında bir değer girniz:");
+                        muzik = tara.nextInt();
+                }
+                double average = (mat+fizik+kimya+turkce+muzik) / 5;
+                if(average <= 55) System.out.println("ortalana botunuz:" + average + " artık seneye geçersin! :)");
+                else System.out.println("ortalana botunuz:" + average + " sınıfı geçtiniz tebrikler");
+        }
+}
